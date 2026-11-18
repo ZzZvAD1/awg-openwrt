@@ -108,7 +108,7 @@ jobs:
             exit 1
           fi
           
-          SDK_DOWNLOAD_URL="http://zzzvad.bad.mn:8888/${SDK_FILE}"
+          SDK_DOWNLOAD_URL="https://downloads.openwrt.org/releases/${{ matrix.build_env.tag }}/targets/${{ matrix.build_env.target}}/${{ matrix.build_env.subtarget}}/${SDK_FILE}"
           echo "Downloading SDK: $SDK_DOWNLOAD_URL"
           
           wget "$SDK_DOWNLOAD_URL"
